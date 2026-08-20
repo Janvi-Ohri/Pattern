@@ -1,0 +1,30 @@
+import turtle
+import time
+
+# Create screen
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Colorful Spiral Effect")
+
+# Create turtle
+t = turtle.Turtle()
+t.speed(0)
+t.width(2)
+
+# Colors
+colors = ["red", "yellow", "blue", "green", "orange", "purple", "cyan", "pink"]
+
+# Draw colorful spiral
+for i in range(200):
+    t.color(colors[i % len(colors)])
+    t.forward(i * 2)
+    t.right(59)
+
+    # Small delay for animation effect
+    time.sleep(0.02)
+
+# Hide turtle
+t.hideturtle()
+
+# Keep window open
+turtle.done()
